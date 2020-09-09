@@ -1,10 +1,10 @@
 import random
 
-highest = 10
+highest = 50
 answer = random.randint(1, highest)
 print(answer)   # TODO: remove after testing
 
-guess = ""
+guess = 0
 print("Please guess number between 1 and {}: ".format(highest))
 while guess != answer:
     guess = int(input())
@@ -16,8 +16,7 @@ while guess != answer:
         break
     else:
         if guess < answer:
-            print("Please guess higher")
+            print("Please guess higher or enter '0' to quit")
         else:   # guess must be greater than answer
-            print("Please guess lower")
-
+            print("Please guess lower or enter '0' to quit")
 
